@@ -1,0 +1,637 @@
+/*
+ * The var() function is used to insert the value of a CSS variable.
+ * To create a variable with global scope, declare it inside the :root selector. 
+ * Advantages of using var() are:
+ *
+** 1. makes the code easier to read (more understandable)
+ * 2. makes it much easier to change the color values
+ */
+
+ :root {
+    --primary_color: #293462;
+    --secondary_color: #EC9B3B;
+    --text_color: #333333;
+
+    --table_even_color: #efefef;
+    --table_odd_color: white;
+}
+
+body {
+    margin:0;
+    background-color: #efefef;
+}
+
+/* disabling underline for links. They are handled by other styling rules.*/
+
+a {
+    text-decoration: none; 
+}
+
+.website_logo {
+    float: left;
+    height: 35px;
+    margin-top: 8px;
+    width: 35px;
+    padding-left: 1%;
+}
+
+.my_top_bar {
+    margin-left: auto;
+    float: right;
+    padding-top: 16px;
+    padding-right: 2%;
+}
+
+.top_bar_link {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.top_bar_link:hover{
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #EC9B3B;
+}
+
+.active_destination {
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.website_banner {
+    height: 800px;
+    padding: 16px;
+}
+
+.website_banner_title{
+    color: white;
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+.website_banner_desc {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*
+ * Page Banners Bellow:
+ */
+
+.home_banner {
+    background-image: url("../img/flights_banner.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.btn_link{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    border: none; /* removes the outline border from the btn */
+    cursor: pointer;
+}
+
+#search_by_mail{   
+    margin: 0;
+    position: absolute;
+    margin-top: 100px;
+    width:30%;
+    left: 50%; /* used to center the promo button */
+    -ms-transform: translate(-50%, -50%); /* used to center the promo button */
+    transform: translate(-50%, -50%); /* used to center the promo button */
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 50px */
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom:16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+    border:none;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.promo_banner_btn{
+    background-color: #EC9B3B;  
+    margin-right: 16px;
+    border: none; /* removes the outline border from the btn */
+    cursor: pointer;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+.promo_banner_btn:hover {
+    background-color: #cf7d18;
+}
+
+.promo_banner_btn_clean {
+    background-color: #666666;
+    color: white;
+    border: none; /* removes the outline border from the btn */
+    cursor: pointer;
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+/* General Containers used in all screens */
+
+.container{
+    padding:16px;
+    background-color: #e5e5e5;
+    height:650px;
+    padding-top:50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+}
+
+.container_alt {
+    padding:16px;
+    background-color: #f2f2f2;
+}
+
+.center_text {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--text_color);
+}
+
+.center_text:hover {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--text_color);
+}
+
+.center_url {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--primary_color);
+    text-decoration: none;
+}
+
+.center_url:hover {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--primary_color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary_color);
+}
+
+.bold_promo_text {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* */
+
+.container_title {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text_color);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.inner {
+    padding:16px;
+    height:550px;
+    width:47.5%;
+    border-radius: 5px;
+}
+
+.inner_right{
+    height: 250px;
+    background-color: white;
+    float:right;
+}
+
+.inner_img {
+    width:100%;
+    height:75%;
+    border-radius: 5px;
+}
+
+.inner_title_left {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text_color);
+    margin-top: 70px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.left_url {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    color: var(--primary_color);
+    text-decoration: none;
+}
+
+.left_url:hover {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary_color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary_color);
+}
+
+.left_url_white {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.left_url_white:hover {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;;
+}
+
+/* 
+ * The :nth-child(n) selector matches every element that is the nth child of its parent.
+ * n can be a number, a keyword (odd or even), or a formula (like an + b). 
+ * 
+ * odd numbers: 1,3,5,7 ...
+ * even numbers: 2,4,6,8 ...
+ */
+
+ tr:nth-child(even){
+    background-color: var(--table_even_color);
+}
+
+tr:nth-child(odd){
+    background-color: var(--table_odd_color);
+}
+
+th{
+    background-color: #293462;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+ * Footer stylings
+ */
+
+.footer {
+    background-color:#222222;
+    padding: 16px;
+    height:650px;
+}
+
+.footer_text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer_btn{
+    background-color: var(--primary_color);    
+    margin: 0;
+    position: absolute;
+    margin-top: 48px;
+    left: 50%; /* used to center the promo button */
+    -ms-transform: translate(-50%, -50%); /* used to center the promo button */
+    transform: translate(-50%, -50%); /* used to center the promo button */
+    padding: 12px 20px; /* x,y => x: vertical padding, y: horizontal padding */
+    border-radius: 50px; /* makes the button rounded by 4px */
+}
+
+.footer_btn:hover {
+    background-color: #3b4c8f;
+}
+
+.footer_sitemap {
+    margin-top: 150px;
+    width: 15%;
+}
+
+.footer_sitemap_header {
+    color: white;
+    margin-left:32px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.footer_sitemap_item {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left:32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.footer_sitemap_item:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.developed_by {
+    margin-top: 150px;
+    padding: 32px;
+    color: rgba(255, 255, 255,0.6);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.footer_go_up_btn {
+    width:42px;
+    height:42px;
+    float:right;
+    margin-top: 100px;
+    padding: 32px;
+}
+
+/*
+ * Media Queries.
+ * 
+ */
+
+/* Large Screen */
+
+ @media screen and (max-width: 1600px) {
+    .website_banner_title{
+        padding-top: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .inner {
+        padding:16px;
+        height:550px;
+        width:46%;
+        border-radius: 5px;
+    }
+
+    .inner_right{
+        height: 250px;
+        background-color: white;
+        float:right;
+    }
+    
+    .inner_img {
+        width:100%;
+        height:75%;
+        border-radius: 5px;
+    }
+}
+
+/* Medium Screen */
+
+@media screen and (max-width: 1250px) {
+    .website_banner {
+        padding: 16px;
+        width: 97.3%;
+    }
+
+    .website_banner_title{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    #search_by_mail{   
+        width:50%;
+    }
+
+    .container_title {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text_color);
+        font-size: x-large;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .container{
+        padding: 24px;
+        background-color: #e5e5e5;
+        height:750px;
+        width: 95.4%;
+    }
+
+    .inner {
+        padding:16px;
+        height:550px;
+        width:46%;
+        border-radius: 5px;
+    }
+
+    .inner_right{
+        height: 250px;
+        background-color: white;
+        float:right;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:700px;
+        width:97.1%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+}
+
+/* Tablet Screen */
+
+@media screen and (max-width: 1050px) {
+    .website_banner_title{
+        padding-top: 25px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+    .website_banner {
+        padding: 16px;
+        width: 97.18%;
+    }
+
+    #search_by_mail{   
+        width:50%;
+    }
+
+    .container_title {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text_color);
+        font-size: x-large;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:1200px;
+        width: 98.2%;
+    }
+
+    .inner {
+        width:96%;
+        height:38%;
+        border-radius: 5px;
+        float:left;
+    }
+
+    .inner_right{
+        height: 250px;
+        margin-top:20px;
+        background-color: white;
+        float:left;
+    }
+
+    .inner_img {
+        width:100%;
+        height:70%;
+        border-radius: 5px;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:850px;
+        width: 97%;
+    }
+
+    .footer_sitemap {
+        width: 25%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+
+    .left_url_white {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+ /* Mobile Screen */
+
+ @media screen and (max-width: 500px) {
+
+    .website_banner {
+        padding: 16px;
+        width: 93.8%;
+    }
+
+    .website_banner_title{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    #search_by_mail {
+        width: 75%;
+    }
+
+    .container_title {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text_color);
+        font-size: x-large;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .inner {
+        width:91%;
+        height:30%;
+        margin-left: 3.5px;
+        border-radius: 5px;
+        float:left;
+    }
+
+    .inner_right{
+        height: 250px;
+        margin-top:20px;
+        background-color: white;
+        float:left;
+    }
+
+    .inner_img {
+        width:100%;
+        height:65%;
+        border-radius: 5px;
+    }
+
+    .container{
+        padding: 10px;
+        background-color: #e5e5e5;
+        height:1200px;
+        width: 95%;
+    }
+
+    .footer {
+        background-color:#222222;
+        padding: 16px;
+        height:850px;
+        width: 93.9%;
+    }
+
+    .footer_sitemap {
+        width: 50%;
+    }
+
+    .developed_by{
+        margin-top: 300px;
+        color: rgba(255, 255, 255,0.6);
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .footer_go_up_btn {
+        float:right;
+        margin-top: 160px;
+        padding: 16px;
+    }
+
+    .left_url_white {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        margin-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
