@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-        <title>Αρχική - Stathis Airlines</title>
+        <title>Αεροσκάφη - Stathis Airlines</title>
         <link rel="icon" type="image/x-icon" href="../img/icons/stathis_airlines_logo_white.ico">
 
         <!-- Allows Media Queries-->

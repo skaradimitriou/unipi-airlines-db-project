@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-        <title>Αρχική - Stathis Airlines</title>
+        <title>Δημοφιλείς Προορισμοί - Stathis Airlines</title>
         <link rel="icon" type="image/x-icon" href="../img/icons/stathis_airlines_logo_white.ico">
 
         <!-- Allows Media Queries-->
@@ -63,7 +63,7 @@
                     FROM flights
                     INNER JOIN airports
                     ON flights.arrival_airport = airports.code
-                    WHERE departure_date BETWEEN '1/1/".$_POST["flight_year"]."' AND '31/12/".$_POST["flight_year"]."'
+                    WHERE departure_date BETWEEN '".$_POST["flight_year"]."-1-1' AND '".$_POST["flight_year"]."-12-31'
                     GROUP BY airports.city, airports.code, airports.name
                     ORDER BY COUNT(*) DESC
                     LIMIT 5;";
