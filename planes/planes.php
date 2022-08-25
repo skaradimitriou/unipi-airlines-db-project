@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-        <title>Αρχική - Stathis Airlines</title>
+        <title>Αεροσκάφη - Stathis Airlines</title>
         <link rel="icon" type="image/x-icon" href="../img/icons/stathis_airlines_logo_white.ico">
 
         <!-- Allows Media Queries-->
@@ -75,7 +75,8 @@
             //<!-- Takes up all div space-->
             echo '<p class="container_title">Όλα τα αεροσκάφη</p>';
             echo '<div id="flights_table" class="responsive_table">
-                <table  style="width:100%; padding-top:32px; text-align: center;">';
+                <div style="overflow-x:auto;">
+                <table  style="width:100%; padding-top:32px; text-align: center; overflow-x:auto;">';
             echo '<tr>
                 <th>Κωδικός Αεροσκάφους (Aircraft Code)</td>
                 <th>Όνομα Μοντέλου (Model Name)</th>
@@ -91,7 +92,7 @@
                     echo"<td>".$row['range']."</td>";
                     echo("</tr>");
             }
-            echo '</table></div>';
+            echo '</table></div></div>';
         } else {
             echo '<p class="container_title">Δεν βρέθηκαν αεροσκάφη στη βάση δεδομένων</p>';
         }

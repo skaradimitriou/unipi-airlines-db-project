@@ -79,6 +79,7 @@
                 echo sprintf($format,$_POST["flight_year"]);
 
                 echo '<div id="flights_table" class="responsive_table">
+                    <div style="overflow-x:auto;">
                     <table  style="width:100%; padding-top:32px; text-align: center;">';
                 echo '<tr>
                     <th>Πόλη</td>
@@ -95,7 +96,7 @@
                         echo"<td>".$row['visitors']."</td>";
                         echo("</tr>");
                 }
-                echo '</table></div>';
+                echo '</table></div></div>';
             } else {
                 $format = '<p class="container_title">Δεν βρέθηκαν Δημοφιλείς Προορισμοί για το %s </p>';
                 echo sprintf($format,$_POST["flight_year"]);

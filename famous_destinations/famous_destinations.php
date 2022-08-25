@@ -85,6 +85,7 @@
                 //<!-- Takes up all div space-->
                 echo '<p class="container_title">Δημοφιλείς Προορισμοί 2022</p>';
                 echo '<div id="flights_table" class="responsive_table">
+                    <div style="overflow-x:auto;">
                     <table  style="width:100%; padding-top:32px; text-align: center;">';
                 echo '<tr>
                     <th>Πόλη</td>
@@ -101,7 +102,7 @@
                         echo"<td>".$row['visitors']."</td>";
                         echo("</tr>");
                 }
-                echo '</table></div>';
+                echo '</table></div></div>';
             } else {
                 echo '<p class="container_title">Δεν βρέθηκαν δημοφιλείς προορισμοί για το έτος που επιλέξατε</p>';
             }

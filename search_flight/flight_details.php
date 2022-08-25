@@ -86,6 +86,7 @@
                     //<!-- Takes up all div space-->
                     echo '<p class="container_title">Αποτελέσματα Αναζήτησης</p>';
                     echo '<div id="flights_table" class="responsive_table">
+                        <div style="overflow-x:auto;">
                         <table  style="width:100%; padding-top:32px; text-align: center;">';
                     echo '<tr>
                         <th>Όνοματεπώνυμο Επιβάτη</td>
@@ -108,7 +109,7 @@
                             echo"<td>".$row['book_date']."</td>";
                             echo("</tr>");
                     }
-                    echo '</table></div>';
+                    echo '</table></div></div>';
                 } else {
                     echo '<p class="container_title" style="text-align:center;">Δεν βρέθηκαν αποτελέσματα αναζήτησης για τα στοιχεία που εισάγατε</p>';
                 }
