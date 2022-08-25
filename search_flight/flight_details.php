@@ -58,6 +58,8 @@
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 
                 //sql query to get all airplanes from the database
+
+                
                 $sql = "SELECT passenger_name, flight_no, arrival_airport, airports.name, airports.city, departure_date,book_ref,book_date
                         FROM bookings
                         INNER JOIN passengers
@@ -67,7 +69,9 @@
                         INNER JOIN airports
                             ON flights.arrival_airport = airports.code
                             
-                        WHERE flights.flight_no = '".$_POST['flight_code']."' AND departure_date = '".$_POST['flight_reservation_date']."' AND flights.flight_status = 'Departed';";
+                        WHERE flights.flight_no = '".$_POST['flight_code']."' AND departure_date = '".$_POST['flight_reservation_date']."' AND flights.flight_status = 'Arrived'
+                        LIMIT 1;";
+
 
                 // this line prints the sql query in the browser tab.
                 // it is commented out because it is used for debugging purposes.

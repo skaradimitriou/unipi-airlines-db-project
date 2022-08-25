@@ -38,8 +38,8 @@
 
             <div id="search_by_flight">
                     <form id="search_flight_form" method="post" action="flight_details.php">
-                        <input id="flight_code" name="flight_code" type="text" maxlength="6" placeholder="Εισάγετε τον κωδικό πτήσης (π.χ. LM1632)"><br>
-                        <input id="flight_reservation_date" name="flight_reservation_date" type="text" placeholder="Εισάγετε την ημερομηνία που πετάξατε με την πτήση (π.χ 22/8/2022)"><br>
+                        <input id="flight_code" name="flight_code" type="text" maxlength="6" placeholder="Εισάγετε τον κωδικό πτήσης (π.χ. AB4354)"><br>
+                        <input id="flight_reservation_date" name="flight_reservation_date" type="text" placeholder="Εισάγετε την ημερομηνία που πετάξατε με την πτήση (π.χ 2/8/2022)"><br>
 
                         <input class="promo_banner_btn btn_link" type="button" onclick="submitQuery()" value="Αναζήτηση">
                         <input class="promo_banner_btn_clean" type="button"  onclick="clearSearchBox()" value="Καθαρισμός">
