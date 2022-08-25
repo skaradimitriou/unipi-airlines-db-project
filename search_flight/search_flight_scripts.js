@@ -22,6 +22,12 @@ function submitQuery(){
 function validateField(inputTxt, fieldName){
     if(inputTxt.length != 0){
         document.getElementById(fieldName).style = "border:1px solid green;";
+
+        var reversedDate = inputTxt.split("/").reverse().join("/");
+        var formattedDate = reversedDate.replaceAll("/","-");
+
+        document.getElementById("flight_reservation_date").value = formattedDate;
+
         return true;
     } else {
         alert("Το πεδίο" + " " + fieldName + " " + "είναι κενό");
