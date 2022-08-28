@@ -33,7 +33,7 @@
 
             <div>
                 <p class="website_banner_title">Ο Στόλος μας</p>
-                <p class="website_banner_desc">Ανακάλυψε τα μοναδικά αεροσκάφη μας που σας κάνουν το επόμενο ταξίδι σας πραγματικότητα. <br> Αν επιθυμείς να προθέσεις, επεξεργαστείς ή διαγράψεις κάποιο αεροσκάφος, πάτησε παρακάτω</p>
+                <p class="website_banner_desc">Αν επιθυμείς να προθέσεις, επεξεργαστείς ή διαγράψεις κάποιο αεροσκάφος, πάτησε παρακάτω</p>
                 <p class="website_banner_btn"><a class="btn_link" href="plane_form.php">Επεξεργάσου τα αεροσκάφη</a></p>
 
                 <p><a href="#categories"><img class="go_to_categories" src="../img/icons/ic_go_to_top.png" alt="go_to_top_btn"></a></p>

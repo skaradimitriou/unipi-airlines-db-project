@@ -478,7 +478,7 @@ td {
         text-align: center;
     }
     .website_banner {
-        height: 700px;
+        height: 750px;
         padding: 16px;
         width: 97.18%;
     }
@@ -561,7 +561,7 @@ td {
  @media screen and (max-width: 500px) {
 
     .website_banner {
-        height: 700px;
+        height: 800px;
         padding: 16px;
         width: 93.6%;
     }
